@@ -137,7 +137,7 @@ final class ResourceLoaderDelegate: NSObject, AVAssetResourceLoaderDelegate, URL
         guard let response = response else { return }
 
         contentInformationRequest?.contentType = response.mimeType
-        contentInformationRequest?.contentLength = response.expectedContentLength
+        contentInformationRequest?.contentLength = fileHandle.fileSize
         contentInformationRequest?.isByteRangeAccessSupported = true
     }
 
